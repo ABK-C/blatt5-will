@@ -10,7 +10,7 @@ class Vektor {
  public:
   Vektor(double nx = 0, double ny = 0, double nz = 0);
 
-  double betrag();
+  double betrag(double nx, double ny, double nz);
 
   double x() { return x_; }
   double y() { return y_; }
@@ -19,7 +19,7 @@ class Vektor {
   Vektor operator+(Vektor v);
   Vektor operator-(Vektor v);
 
-  double mal(Vektor v);
+  Vektor mal(Vektor v);
   Vektor kreuz(Vektor v);
 
   bool operator==(Vektor v) {

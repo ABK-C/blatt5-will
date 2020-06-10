@@ -16,7 +16,7 @@ int main() {
 
   // teste Betrag
   std::cout << "Betrag von " << a << " = 3?     "
-            << (a.betrag() == 3 ? "ok" : "NEIN!") << '\n';
+            << (a.betrag(a.x(), a.y(), a.z()) == 3 ? "ok" : "NEIN!") << '\n';
 
   // test Einlese
   Vektor b;
@@ -34,7 +34,7 @@ int main() {
   std::cout << a << " + " << v1 << " = (3,-3,5)?          "
             << (a + v1 == Vektor(3, -3, 5) ? "ok" : "NEIN!") << '\n';
   std::cout << a << " - " << v1 << " = (1,1,-1)?          "
-            << (a - v1 == Vektor(1, 1, -1) ? "ok" : "NEIN!") << '\n';
+            << ((a - v1) == Vektor(1, 1, -1) ? "ok" : "NEIN!") << '\n';
 
   // teste Skalar- und Kreuzprodukt
   std::cout << v1 << " mal " << v2 << " = 7                "
